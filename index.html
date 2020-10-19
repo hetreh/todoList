@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+</head>
+<body>
+
+	<div id="div1">
+		<button id="enterBtnId">Enter New TODO List</button>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("enterBtnId").onclick = function() {
+			var enterList = prompt("Enter new TODO");
+
+			var parent = document.getElementById("div1");
+			var child = document.createElement("p");
+			var text = document.createTextNode(enterList);
+			child.appendChild(text);
+
+			parent.appendChild(child);
+
+		}
+	</script>
+</body>
+</html>
